@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-align:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    overflow:hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg {
+    background: url('https://fitz-cms-images.s3.eu-west-2.amazonaws.com/homepage-adjusted-2000x1000_1.png') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loading-text {
+    font-size: 50px;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.caption {
+    visibility:hidden;
+    transition: visibility 0.3s ease-in;
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow:10px 8px rgb(55, 55, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:link {
+    text-decoration: none;
+    color: goldenrod
+}
+
+a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+a:active {
+    text-decoration: none;
+    color: rgb(55, 55, 255)
+}
+
+button {
+    border: none;
+}
+
+button:active {
+    transform: translateY(8px) translateX(6px);
+    box-shadow: 2px 2px rgb(55, 55, 255);
 }
